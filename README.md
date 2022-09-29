@@ -6,7 +6,7 @@ This sample demonstrates how to create a simple square calculation utility libra
 <!-- default file list -->
 *Files to look at*:
 
-* [Shape.cs](./SquereCalcLib/Shape.cs)
+* [Shape.cs](./SquereCalcLib/SquereCalcLib/Shape.cs)
 <!-- default file list end -->
 This project contains the main logic of the square calculation library. It includes three classes:
 #### class Shape
@@ -28,7 +28,7 @@ It is a descendant of the Shape class that represent a circle. It contains the f
 <!-- default file list -->
 *Files to look at*:
 
-* [TriangleTest.cs](./SquareLibTest/TriangleTest.cs)
-* [CircleTest.cs](./SquareLibTest/CircleTest.cs)
+* [TriangleTest.cs](./SquareLibTest/SquareLibTest/TriangleTest.cs)
+* [CircleTest.cs](./SquareLibTest/SquareLibTest/CircleTest.cs)
 <!-- default file list end -->
 This project contains unit tests for the SquareCalcLib project. 

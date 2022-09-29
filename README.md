@@ -28,7 +28,7 @@ It is a descendant of the Shape class that represent a circle. It contains the f
 <!-- default file list -->
 *Files to look at*:
 
-* [TriangleTest.cs](./SquareLibTest/SquareLibTest/TriangleTest.cs)
-* [CircleTest.cs](./SquareLibTest/SquareLibTest/CircleTest.cs)
+* [TriangleTest.cs](./SquereCalcLib/SquareLibTest/TriangleTest.cs)
+* [CircleTest.cs](./SquereCalcLib/SquareLibTest/CircleTest.cs)
 <!-- default file list end -->
 This project contains unit tests for the SquareCalcLib project. 

@@ -2,6 +2,7 @@
 
 
 This sample demonstrates how to create a simple square calculation utility library with unit tests.
+Also it includes the answer to the SQL task.
 ### SquareCalcLib Project
 <!-- default file list -->
 *Files to look at*:
@@ -32,3 +33,8 @@ It is a descendant of the Shape class that represent a circle. It contains the f
 * [CircleTest.cs](./SquereCalcLib/SquareLibTest/CircleTest.cs)
 <!-- default file list end -->
 This project contains unit tests for the SquareCalcLib project. 
+
+### SQL Example Folder
+This folder contains two files related to the SQL task:
+* [ProductCategorySelectQuery.sql](./SQLExample/ProductCategorySelectQuery.sql) - Select query that returns pairs of products and categories.
+* MindboxTest.bak - Backup file of the test data base used for this test. Since the task does not describe how the many-to-many relation should be implemented in the database I used a junction table.

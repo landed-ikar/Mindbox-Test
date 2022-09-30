@@ -1,5 +1,5 @@
          SELECT product_name AS product,
-				category_name AS category
+		category_name AS category
            FROM products AS p
 LEFT OUTER JOIN product_category AS pc
              ON p.product_id = pc.product_id

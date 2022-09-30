@@ -1,9 +1,12 @@
-        (select Products.ProductName, Categories.CategoryName
-           from Products
-left outer join ProductCategory on Products.ProductID = ProductCategory.ProductID
-left outer join Categories on Categories.CategoryID = ProductCategory.CategoryID)
+        (select product_name, category_name
+           from products as p
+left outer join product_category as pc
+             on p.product_id = pc.product_id
+left outer join categories as c 
+             on c.category_id = pc.category_id)
           union
-        (select Null, Categories.CategoryName
-           from Categories
-left outer join ProductCategory on Categories.CategoryID = ProductCategory.CategoryID
-          Where ProductCategory.ProductID is null)
+        (select null, category_Name
+           from categories as c
+left outer join product_category as pc
+             on c.category_id = pc.category_id
+          Where pc.product_id is null)

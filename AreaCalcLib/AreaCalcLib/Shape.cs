@@ -33,21 +33,21 @@ namespace AreaCalcLib
                 return (double)area; }
         }
         public Triangle(double a, double b, double c) {
-            CheckSides(a, b, c);
+            ValidateSides(a, b, c);
             this.a = a;
             this.b = b;
             this.c = c;
         }
         public static double GetArea(double a, double b, double c) {
-            CheckSides(a, b, c);
+            ValidateSides(a, b, c);
             return GetAreaCore(a, b, c);
         }
-        public static bool ChaeckIsRectangular(double a, double b, double c) {
-            CheckSides(a, b, c);
+        public static bool CheckIsRectangular(double a, double b, double c) {
+            ValidateSides(a, b, c);
             return CalcIsRectangular(a, b, c);
         }
 
-        static void CheckSides(double a, double b, double c) {
+        static void ValidateSides(double a, double b, double c) {
             if((a <= 0) || (b <= 0) || (c <= 0))
                 throw new ArgumentException("Triangle sides must be greater than zero");
             if((a + b <= c) || (a + c <= b) || (b + c <= a))
@@ -76,17 +76,17 @@ namespace AreaCalcLib
                 return (double)area; }
         }
         public Circle(double radius) {
-            CheckRadius(radius);
+            ValidateRadius(radius);
             this.radius = radius;
         }
         static double GetAreaCore(double radius) {
             return Math.Pow(radius, 2) * Math.PI;
         }
         public static double GetArea(double radius) {
-            CheckRadius(radius);
+            ValidateRadius(radius);
             return Math.Pow(radius, 2) * Math.PI;
         }
-        static void CheckRadius(double radius) {
+        static void ValidateRadius(double radius) {
             if(radius <= 0)
                 throw new ArgumentException("Radius must be greater than zero");
         }

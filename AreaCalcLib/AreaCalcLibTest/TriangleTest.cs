@@ -103,7 +103,7 @@ namespace AreaCalcLibTest {
             double c = 5;
             bool expectedIsRect = true;
             //Act
-            bool actualIsRect = Triangle.ChaeckIsRectangular(a, b, c);
+            bool actualIsRect = Triangle.CheckIsRectangular(a, b, c);
             //Assert
             Assert.AreEqual(expectedIsRect, actualIsRect);
         }
@@ -115,7 +115,7 @@ namespace AreaCalcLibTest {
             double c = 6;
             bool expectedIsRect = false;
             //Act
-            bool actualIsRect = Triangle.ChaeckIsRectangular(a, b, c);
+            bool actualIsRect = Triangle.CheckIsRectangular(a, b, c);
             //Assert
             Assert.AreEqual(expectedIsRect, actualIsRect);
 

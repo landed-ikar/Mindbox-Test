@@ -38,4 +38,4 @@ This project contains unit tests for the SquareCalcLib project.
 This folder contains two files related to the SQL task:
 * [ProductCategorySelectQuery.sql](./SQLExample/ProductCategorySelectQuery.sql) - Select query that returns pairs of products and categories, even if a product does not have any category.
 * [ProductCategorySelectQuery2.sql](./SQLExample/ProductCategorySelectQuery2.sql) - Select query that returns all possible combinations of products and categories even if a product does not have any category or a category does not have any product.
-* MindboxTest.bak - Backup file of the test data base used for this test. Since the task does not describe how the many-to-many relation should be implemented in the database I used a junction table.
+* mindbox_test.bak - Backup file of the test data base used for this test. Since the task does not describe how the many-to-many relation should be implemented in the database I used a junction table.

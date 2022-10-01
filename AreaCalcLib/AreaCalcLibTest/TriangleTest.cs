@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using SquareCalcLib;
+using AreaCalcLib;
 using System.Collections.Generic;
 
-namespace SquareLibTest {
+namespace AreaCalcLibTest {
     [TestClass]
     public class TriangleTest {
         [TestMethod]
@@ -26,17 +26,17 @@ namespace SquareLibTest {
             }
         }
         [TestMethod]
-        public void CheckInstanceSquare() {
+        public void CheckInstanceArea() {
             //Arrange
             double a = 3;
             double b = 4;
             double c = 5;
-            double expectedSquare = 6;
+            double expectedArea = 6;
             Triangle triangle = new Triangle(a, b, c);
             //Act
-            double actualSquare = triangle.Square;
+            double actualArea = triangle.Area;
             //Assert
-            Assert.AreEqual(expectedSquare, actualSquare);
+            Assert.AreEqual(expectedArea, actualArea);
         }
         [TestMethod]
         public void CheckInstanceRectangularTrue() {
@@ -65,19 +65,19 @@ namespace SquareLibTest {
             Assert.AreEqual(expectedIsRect, actualIsRect);
         }
         [TestMethod]
-        public void CheckStaticSquare() {
+        public void CheckStaticArea() {
             //Arrange
             double a = 3;
             double b = 4;
             double c = 5;
-            double expectedSquare = 6;
+            double expectedArea = 6;
             //Act
-            double actualSquare = Triangle.GetSquare(a, b, c);
+            double actualArea = Triangle.GetArea(a, b, c);
             //Assert
-            Assert.AreEqual(expectedSquare, actualSquare);
+            Assert.AreEqual(expectedArea, actualArea);
         }
         [TestMethod]
-        public void CheckStaticSquareParameters() {
+        public void CheckStaticAreaParameters() {
             List<double[]> values = new List<double[]>() {
                 new double[3] {-3, 4, 5},
                 new double[3] {3, -4, 5 },
@@ -91,7 +91,7 @@ namespace SquareLibTest {
             };
             foreach(double[] array in values){
                 Assert.ThrowsException<ArgumentException>(
-                    () => { Triangle.GetSquare(array[0], array[1], array[2]); },
+                    () => { Triangle.GetArea(array[0], array[1], array[2]); },
                     $"Test failed for parameters: {array}");
             }
         }
@@ -121,17 +121,17 @@ namespace SquareLibTest {
 
         }
         [TestMethod]
-        public void CheckBaseSquare() {
+        public void CheckBaseArea() {
             //Arrange
             double a = 3;
             double b = 4;
             double c = 5;
-            double expectedSquare = 6;
+            double expectedArea = 6;
             Shape shape = new Triangle(a, b, c);
             //Act
-            double actualSquare = shape.Square;
+            double actualArea = shape.Area;
             //Assert
-            Assert.AreEqual(expectedSquare, actualSquare);
+            Assert.AreEqual(expectedArea, actualArea);
 
         }
     }

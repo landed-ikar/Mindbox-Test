@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using SquareCalcLib;
+using AreaCalcLib;
 
-namespace SquareLibTest {
+namespace AreaCalcLibTest {
     [TestClass]
     public class CircleTest {
         [TestMethod]
@@ -11,36 +11,36 @@ namespace SquareLibTest {
             Assert.ThrowsException<ArgumentException>(() => { new Circle(r); });
         }
         [TestMethod]
-        public void CheckInstanceSquare() {
+        public void CheckInstanceArea() {
             //Arrange
             double r = 1;
-            double expectedSquare = Math.PI;
+            double expectedArea = Math.PI;
             Circle circtle = new Circle(r);
             //Act
-            double actualSquare = circtle.Square;
+            double actualArea = circtle.Area;
             //Assert
-            Assert.AreEqual(expectedSquare, actualSquare);
+            Assert.AreEqual(expectedArea, actualArea);
         }
         [TestMethod]
-        public void CheckStaticSquare() {
+        public void CheckStaticArea() {
             //Arrange
             double r = 1;
-            double expectedSquare = Math.PI;
+            double expectedArea = Math.PI;
             //Act
-            double actualSquare = Circle.GetSquare(r);
+            double actualArea = Circle.GetArea(r);
             //Assert
-            Assert.AreEqual(expectedSquare, actualSquare);
+            Assert.AreEqual(expectedArea, actualArea);
         }
         [TestMethod]
-        public void CheckBaseSquare() {
+        public void CheckBaseArea() {
             //Arrange
             double r = 1;
-            double expectedSquare = Math.PI;
+            double expectedArea = Math.PI;
             //Act
             Shape shape = new Circle(r);
-            double actualSquare = shape.Square;
+            double actualArea = shape.Area;
             //Assert
-            Assert.AreEqual(expectedSquare, actualSquare);
+            Assert.AreEqual(expectedArea, actualArea);
 
         }
     }

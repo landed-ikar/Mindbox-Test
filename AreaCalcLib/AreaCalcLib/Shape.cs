@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SquareCalcLib
+namespace AreaCalcLib
 {
     public abstract class Shape {
-        public abstract double Square { get; }
+        public abstract double Area { get; }
     }
 
     public class Triangle : Shape {
@@ -15,7 +15,7 @@ namespace SquareCalcLib
         double b;
         double c;
         bool? isRectangular;
-        double? square;
+        double? area;
         public double A { get { return a; } }
         public double B { get { return b; } }
         public double C { get { return c; } }
@@ -26,11 +26,11 @@ namespace SquareCalcLib
                 return (bool)isRectangular;
             }
         }
-        public override double Square {
+        public override double Area {
             get {
-                if(square == null)
-                    square = GetSquareCore(a, b, c);
-                return (double)square; }
+                if(area == null)
+                    area = GetAreaCore(a, b, c);
+                return (double)area; }
         }
         public Triangle(double a, double b, double c) {
             CheckSides(a, b, c);
@@ -38,9 +38,9 @@ namespace SquareCalcLib
             this.b = b;
             this.c = c;
         }
-        public static double GetSquare(double a, double b, double c) {
+        public static double GetArea(double a, double b, double c) {
             CheckSides(a, b, c);
-            return GetSquareCore(a, b, c);
+            return GetAreaCore(a, b, c);
         }
         public static bool ChaeckIsRectangular(double a, double b, double c) {
             CheckSides(a, b, c);
@@ -53,10 +53,10 @@ namespace SquareCalcLib
             if((a + b <= c) || (a + c <= b) || (b + c <= a))
                 throw new ArgumentException("One of sides is too large to create a correct triangle");
         }
-        static double GetSquareCore(double a, double b, double c) {
+        static double GetAreaCore(double a, double b, double c) {
             double p = (a + b + c) / 2;
-            double square = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
-            return square;
+            double area = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            return area;
         }
         static bool CalcIsRectangular(double a, double b, double c) {
             return (a*a +  b*b == c*c) || (a * a == b * b + c * c) || (a * a + c * c == b * b);
@@ -65,24 +65,24 @@ namespace SquareCalcLib
 
     public class Circle : Shape {
         double radius;
-        double? square;
+        double? area;
         public double Radius {
             get { return radius; }
         }
-        public override double Square {
+        public override double Area {
             get {
-                if(square == null)
-                    square = GetSquareCore(radius);
-                return (double)square; }
+                if(area == null)
+                    area = GetAreaCore(radius);
+                return (double)area; }
         }
         public Circle(double radius) {
             CheckRadius(radius);
             this.radius = radius;
         }
-        static double GetSquareCore(double radius) {
+        static double GetAreaCore(double radius) {
             return Math.Pow(radius, 2) * Math.PI;
         }
-        public static double GetSquare(double radius) {
+        public static double GetArea(double radius) {
             CheckRadius(radius);
             return Math.Pow(radius, 2) * Math.PI;
         }

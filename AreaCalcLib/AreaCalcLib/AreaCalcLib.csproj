@@ -7,8 +7,8 @@
     <ProjectGuid>{A462E6B9-8482-4E54-BCC5-3E4866282E50}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SquereCalcLib</RootNamespace>
-    <AssemblyName>SquereCalcLib</AssemblyName>
+    <RootNamespace>AreaCalcLib</RootNamespace>
+    <AssemblyName>AreaCalcLib</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

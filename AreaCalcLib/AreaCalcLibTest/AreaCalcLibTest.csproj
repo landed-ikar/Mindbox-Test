@@ -8,8 +8,8 @@
     <ProjectGuid>{1D455E9F-E4C5-45BB-8277-4B3F29712A28}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SquareLibTest</RootNamespace>
-    <AssemblyName>SquareLibTest</AssemblyName>
+    <RootNamespace>AreaCalcLibTest</RootNamespace>
+    <AssemblyName>AreaCalcLibTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SquereCalcLib\SquareCalcLib.csproj">
+    <ProjectReference Include="..\AreaCalcLib\AreaCalcLib.csproj">
       <Project>{a462e6b9-8482-4e54-bcc5-3e4866282e50}</Project>
-      <Name>SquareCalcLib</Name>
+      <Name>AreaCalcLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

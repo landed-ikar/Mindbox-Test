@@ -3,7 +3,7 @@
 
 This sample demonstrates how to create a simple square calculation utility library with unit tests.
 Also it includes the answer to the SQL task.
-### SquareCalcLib Project
+## SquareCalcLib Project
 <!-- default file list -->
 *Files to look at*:
 
@@ -25,7 +25,7 @@ It is a descendant of the Shape class that represent a circle. It contains the f
 *  **double Radius** - returns the current radius of the circle.
 * **double GetSquare (double radius)** - static method that  returns a square of the circle by its radius. Use this method if you need to calculate a circle's square single time without creating the shape instance.
 
-### SquareLibTest Project
+## SquareLibTest Project
 <!-- default file list -->
 *Files to look at*:
 
@@ -34,7 +34,7 @@ It is a descendant of the Shape class that represent a circle. It contains the f
 <!-- default file list end -->
 This project contains unit tests for the SquareCalcLib project. 
 
-### SQL Example Folder
+## SQL Example Folder
 This folder contains two files related to the SQL task:
 * [ProductCategorySelectQuery.sql](./SQLExample/ProductCategorySelectQuery.sql) - Select query that returns pairs of products and categories, even if a product does not have any category.
 * [ProductCategorySelectQuery2.sql](./SQLExample/ProductCategorySelectQuery2.sql) - Select query that returns all possible combinations of products and categories even if a product does not have any category or a category does not have any product.

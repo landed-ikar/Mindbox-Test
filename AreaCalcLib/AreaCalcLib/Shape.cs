@@ -22,43 +22,43 @@ namespace AreaCalcLib
         public bool IsRectangular {
             get {
                 if(isRectangular == null)
-                    isRectangular = CalcIsRectangular(a, b, c);
+                    isRectangular = calcIsRectangular(a, b, c);
                 return (bool)isRectangular;
             }
         }
         public override double Area {
             get {
                 if(area == null)
-                    area = GetAreaCore(a, b, c);
+                    area = getAreaCore(a, b, c);
                 return (double)area; }
         }
         public Triangle(double a, double b, double c) {
-            ValidateSides(a, b, c);
+            validateSides(a, b, c);
             this.a = a;
             this.b = b;
             this.c = c;
         }
         public static double GetArea(double a, double b, double c) {
-            ValidateSides(a, b, c);
-            return GetAreaCore(a, b, c);
+            validateSides(a, b, c);
+            return getAreaCore(a, b, c);
         }
         public static bool CheckIsRectangular(double a, double b, double c) {
-            ValidateSides(a, b, c);
-            return CalcIsRectangular(a, b, c);
+            validateSides(a, b, c);
+            return calcIsRectangular(a, b, c);
         }
 
-        static void ValidateSides(double a, double b, double c) {
+        static void validateSides(double a, double b, double c) {
             if((a <= 0) || (b <= 0) || (c <= 0))
                 throw new ArgumentException("Triangle sides must be greater than zero");
             if((a + b <= c) || (a + c <= b) || (b + c <= a))
                 throw new ArgumentException("One of sides is too large to create a correct triangle");
         }
-        static double GetAreaCore(double a, double b, double c) {
+        static double getAreaCore(double a, double b, double c) {
             double p = (a + b + c) / 2;
             double area = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
             return area;
         }
-        static bool CalcIsRectangular(double a, double b, double c) {
+        static bool calcIsRectangular(double a, double b, double c) {
             return (a*a +  b*b == c*c) || (a * a == b * b + c * c) || (a * a + c * c == b * b);
         }
     }
@@ -72,21 +72,21 @@ namespace AreaCalcLib
         public override double Area {
             get {
                 if(area == null)
-                    area = GetAreaCore(radius);
+                    area = getAreaCore(radius);
                 return (double)area; }
         }
         public Circle(double radius) {
-            ValidateRadius(radius);
+            validateRadius(radius);
             this.radius = radius;
         }
-        static double GetAreaCore(double radius) {
+        static double getAreaCore(double radius) {
             return Math.Pow(radius, 2) * Math.PI;
         }
         public static double GetArea(double radius) {
-            ValidateRadius(radius);
+            validateRadius(radius);
             return Math.Pow(radius, 2) * Math.PI;
         }
-        static void ValidateRadius(double radius) {
+        static void validateRadius(double radius) {
             if(radius <= 0)
                 throw new ArgumentException("Radius must be greater than zero");
         }
